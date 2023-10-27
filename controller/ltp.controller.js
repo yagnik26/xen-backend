@@ -11,6 +11,7 @@ const providerUrl = process.env.RPC;
 const provider = new ethers.providers.JsonRpcProvider(providerUrl);
 
 const saveTradingPrice = async (req, res) => {
+  console.log("Running...");
   const xenBalanceInX3D = await getXenBalanceX3D(provider);
   const data = await axios.get(
     "https://min-api.cryptocompare.com/data/price?fsym=XEN&tsyms=USD&api=b5baa8a285ba5b72a8e23bf83c9df6767b1c2a3f0cc29112052eb6e81ad9eb62"
