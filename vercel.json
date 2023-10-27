@@ -1,0 +1,21 @@
+{
+    "crons": [
+        {
+            "path": "/todayTradingPrice",
+            "schedule": "*/1 * * * *"
+        }
+    ],
+    "version": 2,
+    "builds": [
+        {
+            "src": "./server.js",
+            "use": "@vercel/node"
+        }
+    ],
+    "routes": [
+        {
+            "src": "/(.*)",
+            "dest": "/"
+        }
+    ]
+}
