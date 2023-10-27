@@ -12,8 +12,8 @@ app.get("/", (req, res) => {
   res.send("working....");
 });
 app.use("/api", ltpRouter);
+connectDB();
 
 app.listen(process.env.PORT, () => {
   console.log("listening on port " + process.env.PORT);
-  connectDB();
 });

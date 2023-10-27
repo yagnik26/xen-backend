@@ -1,4 +1,10 @@
 {
+    "crons": [
+        {
+            "path": "/todayTradingPrice",
+            "schedule": "0 12 * * *"
+        }
+    ],
     "version": 2,
     "builds": [
         {
