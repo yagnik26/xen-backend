@@ -2,7 +2,7 @@
     "crons": [
         {
             "path": "/todayTradingPrice",
-            "schedule": "*/1 * * * *"
+            "schedule": "*/24 * * * *"
         }
     ],
     "version": 2,
