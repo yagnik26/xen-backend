@@ -24,17 +24,17 @@ const saveTradingPrice = async (req, res) => {
   let saveData;
   const isExist = await LtPrice.find();
   if (isExist.length > 0) {
-    const futureDate = new Date(
-      isExist[0].date.getTime() + 24 * 60 * 60 * 1000
-    );
-    console.log(futureDate.toISOString());
-    const currentDate = Date.now();
-    if (!(currentDate >= futureDate.toISOString())) {
-      return res.status(400).json({
-        status: "failed",
-        message: "can not restore befour 24 hours ago",
-      });
-    }
+    // const futureDate = new Date(
+    //   isExist[0].date.getTime() + 24 * 60 * 60 * 1000
+    // );
+    // console.log(futureDate.toISOString());
+    // const currentDate = Date.now();
+    // if (!(currentDate >= futureDate.toISOString())) {
+    //   return res.status(400).json({
+    //     status: "failed",
+    //     message: "can not restore befour 24 hours ago",
+    //   });
+    // }
     saveData = await LtPrice.findByIdAndUpdate(
       { _id: isExist[0]._id },
       {
